@@ -54,7 +54,7 @@ public class QuizGame {
 			score-=1;
 			JOptionPane.showInputDialog("Incorrect. Score = " +score);
 		}
-		JOptionPane.showInputDialog("You scored" +score +"points");
+		JOptionPane.showInputDialog("You scored " +score +"points");
 		// 3.  Use an if statement to check if their answer is correct
 				
 				// 4.  if the user's answer was correct, add one to their score 
