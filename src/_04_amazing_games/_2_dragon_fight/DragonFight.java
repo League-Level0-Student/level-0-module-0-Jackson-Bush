@@ -72,7 +72,7 @@ public class DragonFight {
 			
 				// 10. If the dragon's health is less than or equal to 0, the game is over,
 				//     call the dragonLost() method
-			if (dragonHealth <= 99) {
+			if (dragonHealth <= 0) {
 				dragonLost();
 				
 			}
