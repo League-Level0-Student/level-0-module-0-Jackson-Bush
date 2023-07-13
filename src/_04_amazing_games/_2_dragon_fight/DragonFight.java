@@ -37,7 +37,7 @@ public class DragonFight {
 			
 			String AttackI = JOptionPane.showInputDialog("Do you want to attack with a kick or yell?");	
 				// 4. If they typed in "yell":
-			if (AttackI.equals("Yell")) {
+			if (AttackI.equals("yell")) {
 				int random = ran.nextInt(10);
 				playerAttack = random;
 				dragonHealth-=playerAttack;
@@ -46,7 +46,7 @@ public class DragonFight {
 					  // ran.nextInt(10)
 			
 				// 5. If they typed in "kick":
-			if (AttackI.equals("Kick")) {
+			if (AttackI.equals("kick")) {
 				int randomI = ran.nextInt(25);
 				playerAttack = randomI;
 				dragonHealth-=playerAttack;
@@ -72,12 +72,13 @@ public class DragonFight {
 			
 				// 10. If the dragon's health is less than or equal to 0, the game is over,
 				//     call the dragonLost() method
-			if (dragonHealth <= 0) {
+			if (dragonHealth <= 99) {
 				dragonLost();
+				
 			}
 				// 11.  Pop up a message that tells us how much health the player and
 				// 		dragon have left.
-
+			JOptionPane.showInputDialog("Player health is at "+playerHealth +". " +"Dragon health is at "+dragonHealth);	
 			
 			// (Bonus: Also display the amount of health that was lost by each in this
 			// round)
@@ -86,17 +87,18 @@ public class DragonFight {
 		} // this is the end of the while loop
 
 	}
+	
 
 	static void playerLost() {
 		// 11. Tell the player that they have been defeated by the dragon and have no treasure
-
+		JOptionPane.showInputDialog("The dragon has defeated you. You have obtained 0 gold.");	
 
 		System.exit(0);   //This code ends the program
 	}
 
 	static void dragonLost() {
 		// 12. Tell the user that the dragon has been defeated and they get a ton of gold!
-
+		JOptionPane.showInputDialog("You have defeated the dragon. You have obtained 1000 gold.");	
 		System.exit(0);   //This code ends the program
 	}
 
